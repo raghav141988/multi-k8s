@@ -1,4 +1,18 @@
 # Docker
+- task: Docker@2
+  inputs:
+    containerRegistry: 'Docker-Raghav'
+    command: 'buildAndPush'
+    Dockerfile: '**/Dockerfile'
+- task: Docker@2
+  inputs:
+    containerRegistry: 'Docker-Raghav'
+    command: 'buildAndPush'
+    Dockerfile: '**/Dockerfile'
+    buildContext: '/server'
+    tags: 'raghav141988/multi-server'
+    buildContext: '/client'
+    tags: 'stephengrider/multi-client'
 # Build a Docker image 
 # https://docs.microsoft.com/azure/devops/pipelines/languages/docker
 
