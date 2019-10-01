@@ -1,0 +1,7 @@
+- task: Docker@2
+  inputs:
+    containerRegistry: 'Docker-Raghav'
+    command: 'buildAndPush'
+    Dockerfile: '**/Dockerfile'
+    buildContext: '/client'
+    tags: 'stephengrider/multi-client'
