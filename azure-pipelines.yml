@@ -24,27 +24,30 @@ stages:
     - task: Docker@2
       displayName: Build Client
       inputs:
+        repository: 'raghav141988/multi-client'
         containerRegistry: 'Docker-Raghav'
         command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
         buildContext: './client'
         tags: 'raghav141988/multi-client'
-        repository: 'raghav141988/multi-client'
+        
     - task: Docker@2
       displayName: Build server
       inputs:
+        repository: 'raghav141988/multi-server'
         containerRegistry: 'Docker-Raghav'
         command: 'buildAndPush'
         Dockerfile: 'server/Dockerfile'
         buildContext: './server'
         tags: 'raghav141988/multi-server'
-        repository: 'raghav141988/multi-server'
+        
     - task: Docker@2
       displayName: Build server
       inputs:
+        repository: 'raghav141988/multi-worker'
         containerRegistry: 'Docker-Raghav'
         command: 'buildAndPush'
         Dockerfile: 'worker/Dockerfile'
         buildContext: './worker'
         tags: 'raghav141988/multi-worker'
-        repository: 'raghav141988/multi-worker'
+        
