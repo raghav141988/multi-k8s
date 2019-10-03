@@ -31,7 +31,7 @@ stages:
         command: buildAndPush
         repository: 'raghav141988'
         buildContext: ./client
-        dockerfile: './client/DockerFile'
+        dockerfile: './client/Dockerfile'
         containerRegistry: 'Docker-Raghav'
         tags: |
           'raghav141988:multi-client'
