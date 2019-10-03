@@ -33,5 +33,5 @@ stages:
         dockerfile: './client/Dockerfile'
         containerRegistry: 'Docker-Raghav'
         tags: |
-          'raghav141988:multi-client'
+          'multi-client'
     
