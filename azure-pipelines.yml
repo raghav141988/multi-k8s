@@ -32,6 +32,5 @@ stages:
         buildContext: ./client
         dockerfile: './client/Dockerfile'
         containerRegistry: 'Docker-Raghav'
-        tags: |
-          'multi-client'
+     
     
