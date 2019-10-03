@@ -28,7 +28,7 @@ stages:
       displayName: Build and push an image to container registry
       inputs:
         command: buildAndPush
-        repository: 'raghav141988'
+        repository: 'raghav141988/raghav141988'
         buildContext: ./client
         dockerfile: './client/Dockerfile'
         containerRegistry: 'Docker-Raghav'
