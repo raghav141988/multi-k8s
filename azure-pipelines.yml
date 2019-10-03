@@ -26,18 +26,13 @@ stages:
         containerRegistry: 'Docker-Raghav'
         command: 'login'
     - task: Docker@2
+      displayName: Build and push an image to container registry
       inputs:
-        containerRegistry: 'Docker-Raghav'
-        command: 'buildAndPush'
-        Dockerfile: './client/Dockerfile'
-        buildContext: './client'
+        command: buildAndPush
         repository: 'raghav141988'
-        tags: raghav141988:multi-client
-    - task: Docker@2
-      inputs:
+        buildContext: ./client
+        dockerfile: './client/DockerFile'
         containerRegistry: 'Docker-Raghav'
-        repository: 'raghav141988'
-        command: 'buildAndPush'
-        Dockerfile: './server/Dockerfile'
-        buildContext: './server'
-        tags: 'raghav141988/raghav141988:multi-server'
+        tags: |
+          'raghav141988:multi-client'
+    
