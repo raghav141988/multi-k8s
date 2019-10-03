@@ -34,7 +34,7 @@ stages:
       inputs:
         containerRegistry: 'Docker-Raghav'
         command: 'buildAndPush'
-        Dockerfile: '**/Dockerfile'
+        Dockerfile: 'server/Dockerfile'
         buildContext: './server'
         tags: 'raghav141988/multi-server'
     - task: Docker@2
@@ -42,6 +42,6 @@ stages:
       inputs:
         containerRegistry: 'Docker-Raghav'
         command: 'buildAndPush'
-        Dockerfile: '**/Dockerfile'
+        Dockerfile: 'worker/Dockerfile'
         buildContext: './worker'
         tags: 'raghav141988/multi-worker'
