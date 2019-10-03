@@ -29,7 +29,7 @@ stages:
         command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
         buildContext: './client'
-        tags: 'raghav141988/multi-client'
+        tags: 'multi-client'
         
     - task: Docker@2
       displayName: Build server
@@ -39,7 +39,7 @@ stages:
         command: 'buildAndPush'
         Dockerfile: 'server/Dockerfile'
         buildContext: './server'
-        tags: 'raghav141988/multi-server'
+        tags: 'multi-server'
         
     - task: Docker@2
       displayName: Build server
@@ -49,5 +49,5 @@ stages:
         command: 'buildAndPush'
         Dockerfile: 'worker/Dockerfile'
         buildContext: './worker'
-        tags: 'raghav141988/multi-worker'
+        tags: 'multi-worker'
         
