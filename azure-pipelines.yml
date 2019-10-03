@@ -32,7 +32,7 @@ stages:
         command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
         buildContext: './client'
-        tags: 'raghav141988:multi-client'
+        tags: 'raghav141988/raghav141988:multi-client'
     - task: Docker@2
       inputs:
         containerRegistry: 'Docker-Raghav'
@@ -40,4 +40,4 @@ stages:
         command: 'buildAndPush'
         Dockerfile: './server/Dockerfile'
         buildContext: './server'
-        tags: 'raghav141988:multi-server'
+        tags: 'raghav141988/raghav141988:multi-server'
