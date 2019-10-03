@@ -37,3 +37,11 @@ stages:
         Dockerfile: '**/Dockerfile'
         buildContext: './server'
         tags: 'raghav141988/multi-server'
+    - task: Docker@2
+      displayName: Build server
+      inputs:
+        containerRegistry: 'Docker-Raghav'
+        command: 'buildAndPush'
+        Dockerfile: '**/Dockerfile'
+        buildContext: './worker'
+        tags: 'raghav141988/multi-worker'
