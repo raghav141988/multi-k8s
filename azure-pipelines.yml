@@ -24,12 +24,12 @@ stages:
     - task: Docker@2
       displayName: Build Client
       inputs:
-        repository: 'raghav141988'
+        repository: raghav141988
         containerRegistry: 'Docker-Raghav'
         command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
         buildContext: './client'
-        tags: 'multi-client'
+        tags: multi-client
         
     - task: Docker@2
       displayName: Build server
@@ -39,15 +39,15 @@ stages:
         command: 'buildAndPush'
         Dockerfile: 'server/Dockerfile'
         buildContext: './server'
-        tags: 'multi-server'
+        tags: multi-server
         
     - task: Docker@2
       displayName: Build server
       inputs:
-        repository: 'raghav141988'
+        repository: raghav141988
         containerRegistry: 'Docker-Raghav'
         command: 'buildAndPush'
         Dockerfile: 'worker/Dockerfile'
         buildContext: './worker'
-        tags: 'multi-worker'
+        tags: multi-worker
         
