@@ -32,7 +32,7 @@ stages:
         Dockerfile: './client/Dockerfile'
         buildContext: './client'
         repository: 'raghav141988'
-        tags: $repository:multi-client'
+        tags: raghav141988:multi-client
     - task: Docker@2
       inputs:
         containerRegistry: 'Docker-Raghav'
