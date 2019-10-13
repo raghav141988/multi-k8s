@@ -32,5 +32,20 @@ stages:
         buildContext: ./client
         dockerfile: './client/Dockerfile'
         containerRegistry: 'Docker-Raghav'
-     
+    - task: Docker@2
+      displayName: Build and push an image to container registry
+      inputs:
+        command: buildAndPush
+        repository: 'raghav141988/raghav141988'
+        buildContext: ./server
+        dockerfile: './server/Dockerfile'
+        containerRegistry: 'Docker-Raghav'
+    - task: Docker@2
+      displayName: Build and push an image to container registry
+      inputs:
+        command: buildAndPush
+        repository: 'raghav141988/raghav141988'
+        buildContext: ./worker
+        dockerfile: './worker/Dockerfile'
+        containerRegistry: 'Docker-Raghav'
     
