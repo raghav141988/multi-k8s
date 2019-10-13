@@ -28,7 +28,7 @@ stages:
       displayName: Build and push an image to container registry
       inputs:
         command: buildAndPush
-        repository: 'raghav141988/raghav141988'
+        repository: 'raghav141988/multi-client'
         buildContext: ./client
         dockerfile: './client/Dockerfile'
         containerRegistry: 'Docker-Raghav'
@@ -36,7 +36,7 @@ stages:
       displayName: Build and push an image to container registry
       inputs:
         command: buildAndPush
-        repository: 'raghav141988/raghav141988'
+        repository: 'raghav141988/multi-server'
         buildContext: ./server
         dockerfile: './server/Dockerfile'
         containerRegistry: 'Docker-Raghav'
@@ -44,7 +44,7 @@ stages:
       displayName: Build and push an image to container registry
       inputs:
         command: buildAndPush
-        repository: 'raghav141988/raghav141988'
+        repository: 'raghav141988/multi-worker'
         buildContext: ./worker
         dockerfile: './worker/Dockerfile'
         containerRegistry: 'Docker-Raghav'
